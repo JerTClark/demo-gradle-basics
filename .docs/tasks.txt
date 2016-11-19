@@ -1,0 +1,82 @@
+:buildSrc:compileJava UP-TO-DATE
+:buildSrc:compileGroovy UP-TO-DATE
+:buildSrc:processResources UP-TO-DATE
+:buildSrc:classes UP-TO-DATE
+:buildSrc:jar UP-TO-DATE
+:buildSrc:assemble UP-TO-DATE
+:buildSrc:compileTestJava UP-TO-DATE
+:buildSrc:compileTestGroovy UP-TO-DATE
+:buildSrc:processTestResources UP-TO-DATE
+:buildSrc:testClasses UP-TO-DATE
+:buildSrc:test UP-TO-DATE
+:buildSrc:check UP-TO-DATE
+:buildSrc:build UP-TO-DATE
+Reading the version file
+:tasks
+
+------------------------------------------------------------
+All tasks runnable from root project - BuildBasics is Jeremy's project for learning Gradle build basics.
+------------------------------------------------------------
+
+Build tasks
+-----------
+assemble - Assembles the outputs of this project.
+build - Assembles and tests this project.
+buildDependents - Assembles and tests this project and all projects that depend on it.
+buildNeeded - Assembles and tests this project and all projects it depends on.
+classes - Assembles classes 'main'.
+jar - Assembles a jar archive containing the main classes.
+testClasses - Assembles classes 'test'.
+
+Build Setup tasks
+-----------------
+init - Initializes a new Gradle build. [incubating]
+wrapper - Generates Gradle wrapper files. [incubating]
+
+Documentation tasks
+-------------------
+javadoc - Generates Javadoc API documentation for the main source code.
+
+Help tasks
+----------
+components - Displays the components produced by root project 'BuildBasics'. [incubating]
+dependencies - Displays all dependencies declared in root project 'BuildBasics'.
+dependencyInsight - Displays the insight into a specific dependency in root project 'BuildBasics'.
+help - Displays a help message.
+model - Displays the configuration model of root project 'BuildBasics'. [incubating]
+projects - Displays the sub-projects of root project 'BuildBasics'.
+properties - Displays the properties of root project 'BuildBasics'.
+tasks - Displays the tasks runnable from root project 'BuildBasics'.
+
+Verification tasks
+------------------
+check - Runs all checks.
+clean - Deletes the build directory.
+test - Runs the unit tests.
+
+Versioning tasks
+----------------
+incrementMajorVersion - Increments project major version
+incrementMinorVersion - Increments project minor version
+makeReleaseVersion - Makes project a release version
+makeReleaseVersionCustom - Makes project a release version
+
+Other tasks
+-----------
+loadVersion
+printVersion
+
+Rules
+-----
+Pattern: clean<TaskName>: Cleans the output files of a task.
+Pattern: build<ConfigurationName>: Assembles the artifacts of a configuration.
+Pattern: upload<ConfigurationName>: Assembles and uploads the artifacts belonging to a configuration.
+Pattern: increment<Classifier>Version - Increments the project version classifier
+
+To see all tasks and more detail, run gradle tasks --all
+
+To see more detail about a task, run gradle help --task <task>
+
+BUILD SUCCESSFUL
+
+Total time: 7.206 secs

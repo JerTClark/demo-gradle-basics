@@ -1,0 +1,21 @@
+This is BuildBasics, Jeremy's project
+Property was here
+ext is of type class org.gradle.api.internal.plugins.DefaultExtraPropertiesExtension
+:littleDemo UP-TO-DATE
+
+BUILD SUCCESSFUL
+
+Total time: 3.328 secs
+Property was here
+:littleDemo UP-TO-DATE
+
+BUILD SUCCESSFUL
+
+Total time: 4.521 secs
+Property was here
+'Jeremy'
+:littleDemo UP-TO-DATE
+
+BUILD SUCCESSFUL
+
+Total time: 4.451 secs

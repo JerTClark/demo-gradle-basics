@@ -1,0 +1,13 @@
+apply plugin: 'groovy'
+
+group = 'buildbasics'
+
+buildscript {
+    dependencies {
+        classpath gradleApi()
+    }
+}
+
+task hereIAmInBuildSrc << {
+    println "Hello from buildSrc!"
+}

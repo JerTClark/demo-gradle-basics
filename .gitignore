@@ -1,0 +1,23 @@
+# Auto-generated files
+## Idea (Jetbrains IDE)
+**/*.iml
+**/.idea
+**/local.properties
+
+## Gradle
+**/build
+**/.gradle
+**/gradle ## Remove "gradle" folder from .gitignore if the Gralde wrapper is used
+
+## Node.js, web, Cordova
+**/bower_components
+**/node_modules
+**/dist
+**/platforms
+
+## Windows
+**/desktop.ini
+**/Thumbs.db
+
+# Individually tracked
+gradleScripts

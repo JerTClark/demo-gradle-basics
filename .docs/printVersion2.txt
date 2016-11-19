@@ -1,0 +1,7 @@
+Property was here
+'Jeremy'
+:printVersion2
+
+BUILD SUCCESSFUL
+
+Total time: 3.446 secs

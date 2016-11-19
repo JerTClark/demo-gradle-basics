@@ -1,0 +1,11 @@
+Third
+:first
+First:second
+Second
+:third
+:fourth
+Fourth
+
+BUILD SUCCESSFUL
+
+Total time: 3.575 secs

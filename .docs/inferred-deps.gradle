@@ -1,0 +1,18 @@
+task createDistribution(type: Zip, dependsOn: makeReleaseVersionCustom) {
+    from war.outputs.files
+    from(sourceSets*.allSource) {
+        into 'src'
+    }
+    from(rootDir) {
+        include versionFile.name
+    }
+}
+
+task backupReleaseDistribution(type: Copy) {
+    from createDistribution.outputs.files
+    into "${buildDir}/backup"
+}
+
+task release(dependsOn: backupReleaseDistribution) {
+    logger.quiet "Releasing the project..."
+}

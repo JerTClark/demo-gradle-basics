@@ -1,0 +1,20 @@
+Property was here
+'Jeremy'
+:printVersion
+Now print this
+Version: 0.1
+Project name: printVersion
+And print this
+
+BUILD SUCCESSFUL
+
+Total time: 4.585 secs
+Property was here
+'Jeremy'
+:printVersion
+Now print this
+And print this
+
+BUILD SUCCESSFUL
+
+Total time: 4.723 secs
