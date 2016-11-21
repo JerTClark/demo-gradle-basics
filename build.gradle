@@ -14,6 +14,13 @@ dependencies {
 
 }
 
+
+/**
+ * file method provided by Project interface
+ * creates an instance of java.io.File relative to project directory
+ */
+ext.versionFile = file('version.properties')
+
 gradle.taskGraph.whenReady {
     if (gradle.taskGraph.hasTask(':release')) {
         if (!version.release) {
@@ -27,12 +34,6 @@ gradle.taskGraph.whenReady {
 
 def releaseVersionListener = new ReleaseVersionListener()
 gradle.taskGraph.addTaskExecutionGraphListener(releaseVersionListener)
-
-/**
- * file method provided by Project interface
- * creates an instance of java.io.File relative to project directory
- */
-ext.versionFile = file('version.properties')
 
 /**
  * task configuration is declared <b>without a left shift or other action</b>
@@ -53,8 +54,10 @@ ProjectVersion readVersion() {
      * newly created input stream
      */
     versionFile.withInputStream { stream ->
+        //noinspection GroovyAssignabilityCheck
         versionProps.load(stream)
     }
+    //noinspection GrUnresolvedAccess,GroovyAssignabilityCheck
     new ProjectVersion(versionProps.major.toInteger(), versionProps.minor.toInteger(),
             versionProps.release.toBoolean());
 }
@@ -89,6 +92,7 @@ task makeReleaseVersionCustom(type: ReleaseVersionTask) {
 /**
  * We are aiming to replace the following two similar tasks with a task rule
  */
+//noinspection GroovyAssignabilityCheck
 task incrementMajorVersion(group: "versioning",
         description: "Increments project major version") << {
     String currentVersion = version.toString()
@@ -99,6 +103,7 @@ task incrementMajorVersion(group: "versioning",
     }
 }
 
+//noinspection GroovyAssignabilityCheck
 task incrementMinorVersion(group: "versioning",
         description: "Increments project minor version") << {
     String currentVersion = version.toString()
